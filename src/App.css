@@ -36,8 +36,26 @@
     transform: rotate(360deg);
   }
 } */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body{
   padding:0;
   margin:0;
+  background: linear-gradient(180deg, #239adb, #23dbd3, #db23c7);
+    background-size: 600% 600%;
+
+    -webkit-animation: animegrade 7s ease infinite;
+    animation: animegrade 7s ease infinite;
+  
+}
+@-webkit-keyframes animegrade {
+  0%{background-position:0% 83%}
+  50%{background-position:100% 18%}
+  100%{background-position:0% 83%}
+}
+@keyframes animegrade {
+  0%{background-position:0% 83%}
+  50%{background-position:100% 18%}
+  100%{background-position:0% 83%}
 }

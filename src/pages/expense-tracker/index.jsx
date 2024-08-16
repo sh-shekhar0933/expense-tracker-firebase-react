@@ -24,6 +24,8 @@ const navigate=useNavigate();
  
   }
 
+  
+
   const signUserOut=async()=>{
   try{
     await signOut(auth);
@@ -55,10 +57,10 @@ const navigate=useNavigate();
   })
     return (
     <>
-    <div className="expense-tracker">
+    <div className="expense-tracker mx-[200px] " >
 
     <div className="container">
-        <h1> { name }'s Expense Tracker</h1>
+        <h1 > { name }'s Expense Tracker</h1>
         <div className="balance">
             <h3>Your Balance</h3>
             {balance>=0? <h2>${balance}</h2>:<h2>-${-balance}</h2>}
@@ -86,18 +88,18 @@ const navigate=useNavigate();
         </form>
     </div>
 
-   {profilePhoto&&<div className="profile"><img className="profile-photo" src={profilePhoto}/>
+   {profilePhoto&&<div className="profile my-[20px]"><img className="profile-photo" src={profilePhoto}/>
    <button className="sign-out-button" onClick={signUserOut}>Sign Out</button>
    </div>}
     </div>
 
-    <div className="transactions">
-        <h3>Transactions</h3>
+    <div className="transactions text-center text-xl shadow-2xl w-[900px]">
+        <h3 className="font-bold text-3xl my-[40px]">Transactions</h3>
         <ul>{transactions.map((trans)=>{
             const {description,transactionAmount,transactionType}=trans;
             return (
-                <li><h4>{description}</h4>
-                <p>${transactionAmount}.<label>{transactionType}</label></p></li>
+                <li><h4 className="font-bold text-xl">{description}</h4>
+                <p className={"text-"+(transactionType==="expense"? "red":"green")+"-500"}>${transactionAmount}</p></li>
             )
         })}</ul>
     </div>
