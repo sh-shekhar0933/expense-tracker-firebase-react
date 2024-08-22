@@ -37,7 +37,7 @@ export const Auth=()=>{
     }
   })
     return (<div className="login-page">
-    <p>Sign In with google to continue</p>
-    <button className="login-with-google-btn" onClick={signInwithGoogle}>Sign IN</button> </div>
+    <p> Sign In with google to continue</p>
+    <button className="login-with-google-btn text-black font-bold m-[40px]" onClick={signInwithGoogle}>Sign IN</button> </div>
     );
 }

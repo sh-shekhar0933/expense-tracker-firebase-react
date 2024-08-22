@@ -3,14 +3,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
     color: #023047;
     padding:20px;
   }
-  
-  .expense-tracker h1 {
-    font-size: 40px;
+  @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
   }
+ 
   .expense-tracker button {
     margin-left: 10px;
   }
@@ -48,11 +50,11 @@
   }
   
   .transactions {
-    margin:20px auto 0 auto;
    
-    padding-left: 10px;
-    width: 600px;
+   
+    
+    
     height: 400px;
-    overflow: auto;
+    
     
   }
